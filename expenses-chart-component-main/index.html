@@ -1,43 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <title>Frontend Mentor | Expenses chart component</title>
+        <link rel="stylesheet" href="/css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="account-info">
+                    <h5><small>My balance</small></h5>
+                    <span>$921.48</span>
+                </div>
+                <div class="logo">
+                    <img
+                        src="/expenses-chart-component-main/src/images/logo.svg"
+                        alt="Logo"
+                    />
+                </div>
+            </header>
+            <main>
+                <div class="spending-container">
+                    <h3>Spending-Last 7 days</h3>
+                    <canvas class="spending-chart" id="spending-chart"></canvas>
+                    <div class="sum-total">
+                        <div class="sum-total_left">
+                            <p class="date-range">Total this month</p>
+                            <span class="sum-figure">$478.33</span>
+                        </div>
+                        <div class="sum-total_right">
+                            <span class="sum-margin">+2.4%</span>
+                            <p class="date-range">From last month</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="#">Your Name Here</a>.
+        </div> -->
+        <script src="./src/app/app.js"></script>
+    </body>
 </html>

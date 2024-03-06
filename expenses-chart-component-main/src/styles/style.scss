@@ -1,0 +1,106 @@
+$primary-color: hsl(10, 79%, 65%);
+$secondary-color: hsl(186, 34%, 60%);
+$neutral-1: hsl(25, 47%, 15%);
+$neutral-2: hsl(28, 10%, 53%);
+$neutral-3: hsl(27, 66%, 92%);
+$neutral-4: hsl(33, 100%, 98%);
+
+$font-size: 18px;
+@import "reset";
+
+// STYLING
+body {
+    font-size: $font-size;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $neutral-3;
+}
+
+.container {
+    max-width: 350px;
+    width: 100%;
+
+    .header {
+        border-radius: 10px;
+        background-color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $neutral-4;
+        padding: 15px 25px;
+        margin-bottom: 10px;
+
+        .account-info {
+            span {
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+        }
+        .logo {
+            height: auto;
+        }
+    }
+}
+main {
+    background-color: $neutral-4;
+    border-radius: 10px;
+    padding: 25px;
+
+    .spending-container {
+        h3 {
+            color: $neutral-1;
+        }
+    }
+}
+
+.spending-chart {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+.sum-total {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .sum-total_left {
+        line-height: 1.1;
+
+        span {
+            font-weight: bold;
+            font-size: 2rem;
+            color: $neutral-1;
+        }
+    }
+
+    .sum-total_right {
+        align-self: last baseline;
+        line-height: 1.1;
+        text-align: right;
+
+        span {
+            font-size: 14px;
+            color: $neutral-1;
+            font-weight: bold;
+        }
+    }
+}
+
+.date-range {
+    color: gray;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        align-items: baseline;
+        padding-top: 2rem;
+    }
+}
